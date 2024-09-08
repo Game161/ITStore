@@ -1,16 +1,21 @@
-import React from 'react'
-import Layout from '../components/Layout';
+import React from "react";
+import Layout from "../components/Layout";
+import Slideshow from "../elements/slideshow";
 
 const Contact = () => {
   return (
     <Layout>
-      <h1 className="font-bold text-4xl text-blue-950">Contact</h1>
+      <Slideshow />
+      <h1 className="font-bold lg:text-[64px] text-black mt-5 mx-10 md:text-[40px]">Contact</h1>
       <hr />
-      <p className="mt-8 mb-20 text-blue-950">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta accusantium adipisci magnam in nesciunt suscipit sed doloribus vero rerum asperiores distinctio corrupti quisquam fuga dolore, tempora ad labore deserunt perferendis?
-      </p>
+      <div className="mx-10">
+      <h1 className="font-bold lg:text-[64px] text-black mt-5 md:text-[40px]">PPGP IT</h1>
+      <p className="lg:text-[40px] md:text-[24px]"><span className="font-bold">Address : </span>11/18 soi7 Nakhon Pathom 73000</p>
+      <p className="lg:text-[40px] md:text-[24px]"><span className="font-bold">Tel : </span>096-9870945</p>
+      <p className="lg:text-[40px] md:text-[24px]"><span className="font-bold">E-mail : </span>PPGPITShop@gmail.com</p>
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

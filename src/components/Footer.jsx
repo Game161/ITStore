@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className=" bg-black p-4 text-center text-white">
       {/* Add mt-auto */}
-      <div className="flex justify-between mx-72">
+      <div className="flex justify-between lg:mx[200px] sm:mx-[50px]">
         <div className="flex gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -13,9 +13,9 @@ const Footer = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             class="lucide lucide-copyright"
           >
             <circle cx="12" cy="12" r="10" />
@@ -25,6 +25,9 @@ const Footer = () => {
         </div>
         <div className="flex text-white gap-3">
           <a href="">
+              <img src="public\images\twitter.png" className="bg-white w-6" alt="" />
+          </a>
+          <a href="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -32,9 +35,9 @@ const Footer = () => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               class="lucide lucide-youtube"
             >
               <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
@@ -49,9 +52,9 @@ const Footer = () => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               class="lucide lucide-instagram"
             >
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -67,24 +70,25 @@ const Footer = () => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               class="lucide lucide-facebook"
             >
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
           </a>
+          <a href=""><img src="public\images\discord.png" className="bg-white w-6" alt="" /></a>
         </div>
       </div>
-      <div className="flex mx-40 mt-2 text-white">
-        <hr className="w-7 border-red-600" />
-        <hr className="line" />
-        <hr className="w-7 border-red-600" />
+      <div className="flex mt-2 text-white">
+        <hr className="w-[2.5%] border-red-600" />
+        <hr className="w-[95%]" />
+        <hr className="w-[2.5%] border-red-600" />
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center my-[100px]">
         {/* Logo */}
-        <img src="" alt="Logo" className="h-8 w-8 mr-2" />
+        <img src="public\images\logo_wolf.webp" alt="Logo" className="w-24 mr-2"/>
 
         {/* Brand Text */}
         <span

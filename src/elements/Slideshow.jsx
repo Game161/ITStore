@@ -42,32 +42,108 @@ const Slideshow = () => {
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval); // ล้าง interval เมื่อ component ถูก unmount หรือ currentIndex เปลี่ยน
   }, [currentIndex]); // เพิ่ม currentIndex เป็น dependency
-
   return (
     <div className="h-screen w-full relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-full bg-center bg-cover duration-500"
+        className="w-full h-full bg-center bg-cover duration-500 shadow-inner"
       ></div>
-      {/* Left Arrow
+      {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      {/* <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
-      </div> */}
-      <div className="flex justify-center py-2 absolute top-[95%] left-[47%]">
+      </div>
+      <div className="lg:flex justify-center py-2 absolute top-[95%] left-[46%] sm:hidden">
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
             className="text-2xl cursor-pointer"
           >
-            <RxDotFilled className="text-white"/>
+            <span className="progress"></span>
+            <div className="rhombus1 step4 ml-2 bg-slate-200"></div>
           </div>
         ))}
       </div>
+
+      {/* e.prototype.mounted = function(){
+                t = this;
+                window.addEventListener("resize", (function() {
+                    t.checkMobileStatus()
+                }
+                )),
+                this.checkMobileStatus(),
+                setTimeout((function() {
+                    t.nowPointNumber = 0,
+                    t.autoSlideShowHandler(),
+                    t.progressBarHandler()
+                }
+                ), 1500),
+                this.defaultX = window.innerWidth / 2
+              }
+            ,
+            e.prototype.progressBarHandler = function() {
+                t = this;
+                this.progressTimer = 0,
+                this.slideController = !0,
+                this.progressTime = this.randomTime / 100,
+                this.progressPercent = 0,
+                this.progressTimer = setInterval((function() {
+                    !0 === t.slideController && t.progressPercent < 100 && t.progressPercent++,
+                    t.progressPercent >= 100 ? clearInterval(t.progressTimer) : t.progressTimer = null
+                }
+                ), this.progressTime)
+            }
+            ,
+            e.prototype.reAutoHandler = function() {
+                t = this;
+                this.reAutoInterval = setInterval((function() {
+                    t.reAutoStatus && (t.autoSlideShowHandler(),
+                    t.reAutoStatus = !1)
+                }
+                ), 0)
+            }
+            ,
+            e.prototype.autoSlideShowHandler = function() {
+                t = this
+                  , e = Object.keys(this.banner).length;
+                this.autoStatus = setInterval((function() {
+                    1 === t.bannerLength && (clearInterval(t.autoStatus),
+                    clearInterval(t.progressTimer),
+                    t.reAutoStatus = !1,
+                    t.slideController = !1),
+                    t.nowPointNumber === e - 1 ? (t.moveDelta = 0,
+                    t.nowNumber = 0,
+                    t.nowPointNumber = t.nowNumber,
+                    t.progressBarHandler(),
+                    clearInterval(t.progressTimer)) : (t.moveDelta = t.moveDelta - 100,
+                    t.nowNumber++,
+                    t.nowPointNumber = t.nowNumber,
+                    t.progressBarHandler(),
+                    clearInterval(t.progressTimer))
+                }
+                ), this.randomTime)
+            }
+            e.prototype.switchSlide = function() {
+                this.isShowPlayButton ? this.playSlide() : this.pauseSlide()
+            }
+            ,
+            e.prototype.playSlide = function() {
+                this.reAutoHandler(),
+                this.reAutoStatus = !0,
+                this.slideController = !0,
+                this.isShowPlayButton = !1
+            }
+            ,
+            e.prototype.pauseSlide = function() {
+                clearInterval(this.autoStatus),
+                this.reAutoStatus = !1,
+                this.slideController = !1,
+                this.isShowPlayButton = !0
+            } */}
     </div>
   );
 };

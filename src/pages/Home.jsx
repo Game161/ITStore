@@ -1,11 +1,47 @@
 import Layout from "../components/Layout";
 import Card from "../elements/card";
 import Slideshow from "../elements/slideshow";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 const Home = () => {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   const productList = [
     {
       image: "20200824120814.jpg",
       name: "kareenotebook",
+    },
+    {
+      image: "Notebook.webp",
+      name: "adfadsf",
+    },
+    {
+      image: "Notebook.webp",
+      name: "adfadsf",
+    },
+    {
+      image: "Notebook.webp",
+      name: "adfadsf",
+    },
+    {
+      image: "Notebook.webp",
+      name: "adfadsf",
     },
     {
       image: "Notebook.webp",
@@ -31,11 +67,14 @@ const Home = () => {
             our products
           </h1>
           <div className="flex">
-          <div className="grid grid-cols-4 gap-28 text-center">
-            {productList.map((p) => (
-              <Card key={p.name}{...p} />
-            ))}
-          </div>
+            <div className="flex m-0">
+              {/* grid sm:grid-cols-2 gap-28 text-center lg:grid-cols-3 xl:grid-cols-4 h-96 overflow-y-hidden */}
+              <Carousel responsive={responsive}>
+                {productList.map((p) => (
+                <Card key={p.name} {...p} />
+              ))}
+              </Carousel>
+            </div>
           </div>
         </div>
         <div className="w-full bg-blue-50 h-16"></div>
@@ -43,15 +82,16 @@ const Home = () => {
         {/* rec section */}
 
         <div className="mx-auto">
-          <div className="grid grid-cols-2 px-28 gap-24">
+          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 sm:flex sm:flex-col sm:items-center">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
               className="w-full "
             />
-            <div className="flex flex-col justify-center gap-7 w-80">
+            <div className="flex flex-col justify-center gap-2 w-80">
               <h1 className="text-4xl font-bold">Mouse</h1>
-              <p className="text-sm font-bold">
+              <div className="rhombus step3"></div>
+              <p className="text-sm font-semibold mt-8">
                 กำหนดค่าเมาส์ของคุณ รวมถึงออปติคอลเซ็นเซอร์ การตั้งค่า DPI
                 การเลื่อนและการเร่งความเร็ว การตั้งโปรแกรมปุ่ม
                 และหน่วยความจำออนบอร์ด ตั้งโปรแกรม LIGHTSYNC
@@ -59,67 +99,73 @@ const Home = () => {
             </div>
           </div>
 
-
           <div className="w-full bg-blue-50 h-16"></div>
-          <div className="grid grid-cols-2 px-28 gap-24">
-            <div className="flex flex-col justify-center gap-7 w-80">
-              <h1 className="text-4xl font-bold">Mouse</h1>
-              <p className="text-sm font-bold">
-                กำหนดค่าเมาส์ของคุณ รวมถึงออปติคอลเซ็นเซอร์ การตั้งค่า DPI
-                การเลื่อนและการเร่งความเร็ว การตั้งโปรแกรมปุ่ม
-                และหน่วยความจำออนบอร์ด ตั้งโปรแกรม LIGHTSYNC
+          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 sm:flex sm:flex-col sm:items-center">
+            <img
+              src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
+              alt=""
+              className="w-full lg:hidden"
+            />
+            <div className="flex flex-col justify-center gap-2 w-80">
+              <h1 className="text-4xl font-bold">Keyboard</h1>
+              <div className="rhombus step3"></div>
+              <p className="text-sm font-semibold mt-8">
+                ตั้งค่าคีย์บอร์ดของคุณด้วย G Keys ที่พร้อมใช้งานมาโคร
+                ปรับการเชื่อมโยงแต่ละปุ่มแยกต่างหาก กำหนดค่า การผูกปุ่มหลายปุ่ม
+                หรือสร้างมาโครแบบซับซ้อนได้ โปรแกรม LIGHTSYNC
               </p>
             </div>
+            <img
+              src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
+              alt=""
+              className="w-full sm:hidden lg:block"
+            />
+          </div>
+
+          <div className="w-full bg-blue-50 h-16"></div>
+          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 sm:flex sm:flex-col sm:items-center">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
               className="w-full"
             />
+            <div className="flex flex-col justify-center gap-2 w-80">
+              <h1 className="text-4xl font-bold">Headphones and Speakers</h1>
+              <div className="rhombus step3"></div>
+              <p className="text-sm font-semibold mt-8">
+                ตั้งค่าEQแบบกำหนดเองและค่ากำหนดระบบเซอร์ราวด์ของแต่ละโปรไฟล์เกมแยกกันได้
+                กำหนด G Keys ที่ติดตั้งบนชุดหูฟังเพื่อการเล่นที่เร็วกว่า
+                และแม่นยำกว่า โปรแกรมอุปกรณ์เสียง LIGHTSYNC
+              </p>
+            </div>
           </div>
 
-
-
           <div className="w-full bg-blue-50 h-16"></div>
-          <div className="grid grid-cols-2 px-28 gap-24">
+          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 sm:flex sm:flex-col sm:items-center">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
-              className="w-full"
+              className="w-full lg:hidden"
             />
-            <div className="flex flex-col justify-center gap-7 w-80">
-              <h1 className="text-4xl font-bold">Mouse</h1>
-              <p className="text-sm font-bold">
-                กำหนดค่าเมาส์ของคุณ รวมถึงออปติคอลเซ็นเซอร์ การตั้งค่า DPI
-                การเลื่อนและการเร่งความเร็ว การตั้งโปรแกรมปุ่ม
-                และหน่วยความจำออนบอร์ด ตั้งโปรแกรม LIGHTSYNC
-              </p>
-            </div>
-          </div>
-
-
-
-          <div className="w-full bg-blue-50 h-16"></div>
-          <div className="grid grid-cols-2 px-28 gap-24">
-            <div className="flex flex-col justify-center gap-7 w-80">
-              <h1 className="text-4xl font-bold">Mouse</h1>
-              <p className="text-sm font-bold">
-                กำหนดค่าเมาส์ของคุณ รวมถึงออปติคอลเซ็นเซอร์ การตั้งค่า DPI
-                การเลื่อนและการเร่งความเร็ว การตั้งโปรแกรมปุ่ม
-                และหน่วยความจำออนบอร์ด ตั้งโปรแกรม LIGHTSYNC
+            <div className="flex flex-col justify-center gap-2 w-80">
+              <h1 className="text-4xl font-bold">Webcam</h1>
+              <div className="rhombus step3"></div>
+              <p className="text-sm font-semibold mt-8">
+                สร้างโปรไฟล์กล้องและวิดีโอ
+                การตั้งค่าได้รับการจัดเก็บและนำไปใช้ตั้งแต่เริ่มต้น
+                สลับโปรไฟล์ขณะใช้งานได้
               </p>
             </div>
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
-              className="w-full"
+              className="w-full sm:hidden lg:block"
             />
           </div>
         </div>
         <div className="w-full bg-blue-50 h-40"></div>
       </div>
-            
     </Layout>
   );
 };
-
 export default Home;

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,23 +8,26 @@
 body{
   font-family: "IBM Plex Sans";
 }
+p{
+  font-family: "IBM Plex Sans Thai";
+}
 .logo{
   font-family: "Iceland", sans-serif;
 }
-.line{
-  width: 1500px;
+.rhombus {
+  background-color: #031CFF;
+  
 }
-.arrow-up {
-  width: 7; 
-  height: 3; 
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid black;
+.step3 {
+  width: 80px;
+  height: 10px;
+  transform: skewX(45deg) scaleY(cos(45deg));
 }
-.arrow-down {
-  width: 7; 
-  height: 3; 
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #f00;
+.rhombus1{
+  background-color: #D9D9D9;
+}
+.step4 {
+  width: 25px;
+  height: 4px;
+  transform: skewX(45deg) scaleY(cos(45deg));
 }
