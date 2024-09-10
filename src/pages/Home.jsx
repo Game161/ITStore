@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import Card from "../elements/card";
+import ProductTypeCard from "../elements/ProductTypeCard";
 import Slideshow from "../elements/slideshow";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -10,15 +11,19 @@ const Home = () => {
       items: 5,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1280 },
+      items: 4,
+    },
+    laptop: {
+      breakpoint: { max: 1280, min: 1024 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 640 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 640, min: 0 },
       items: 1,
     },
   };
@@ -29,31 +34,31 @@ const Home = () => {
     },
     {
       image: "Notebook.webp",
-      name: "adfadsf",
+      name: "sdfsdfsdf",
     },
     {
       image: "Notebook.webp",
-      name: "adfadsf",
+      name: "sdfsdfsdfsdfsdf",
     },
     {
       image: "Notebook.webp",
-      name: "adfadsf",
+      name: "sdfsdfsdfsdfsdf",
     },
     {
       image: "Notebook.webp",
-      name: "adfadsf",
+      name: "sdfsfd",
     },
     {
       image: "Notebook.webp",
-      name: "adfadsf",
+      name: "sdfsdfsdf",
     },
     {
       image: "Notebook.webp",
-      name: "adfadsf",
+      name: "sdfsdfsdfsdf",
     },
     {
       image: "Notebook.webp",
-      name: "adfadsf",
+      name: "sdfsdfsdfsdfds",
     },
   ];
   return (
@@ -62,27 +67,24 @@ const Home = () => {
 
       {/* product */}
       <div className="gap-10">
-        <div className="flex flex-col gap-28 bg-white mx-20">
+        <div className="flex flex-col gap-28 bg-white px-[200px]">
           <h1 className="uppercase text-5xl font-bold mt-10 flex justify-center">
             our products
           </h1>
-          <div className="flex">
-            <div className="flex m-0">
-              {/* grid sm:grid-cols-2 gap-28 text-center lg:grid-cols-3 xl:grid-cols-4 h-96 overflow-y-hidden */}
-              <Carousel responsive={responsive}>
-                {productList.map((p) => (
-                <Card key={p.name} {...p} />
+          <div className="flex w-full">
+            <Carousel responsive={responsive} className="w-full">
+              {productList.map((p) => (
+                <ProductTypeCard key={p.name} {...p} />
               ))}
-              </Carousel>
-            </div>
+            </Carousel>
           </div>
+          <div></div>
         </div>
         <div className="w-full bg-blue-50 h-16"></div>
-
         {/* rec section */}
 
-        <div className="mx-auto">
-          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 sm:flex sm:flex-col sm:items-center">
+        <div className="flex flex-col mx-auto gap-24">
+          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 flex flex-col items-center bg-white">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
@@ -98,9 +100,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-
-          <div className="w-full bg-blue-50 h-16"></div>
-          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 sm:flex sm:flex-col sm:items-center">
+          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 flex flex-col items-center bg-white">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
@@ -112,18 +112,17 @@ const Home = () => {
               <p className="text-sm font-semibold mt-8">
                 ตั้งค่าคีย์บอร์ดของคุณด้วย G Keys ที่พร้อมใช้งานมาโคร
                 ปรับการเชื่อมโยงแต่ละปุ่มแยกต่างหาก กำหนดค่า การผูกปุ่มหลายปุ่ม
-                หรือสร้างมาโครแบบซับซ้อนได้ โปรแกรม LIGHTSYNC
+                หรือสร้างมาโครแบบซับซ้อนได้ โปรแกรม LIGHTSYNC  
               </p>
             </div>
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
-              className="w-full sm:hidden lg:block"
+              className="w-full hidden lg:block"
             />
           </div>
 
-          <div className="w-full bg-blue-50 h-16"></div>
-          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 sm:flex sm:flex-col sm:items-center">
+          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 flex flex-col items-center bg-white">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
@@ -139,9 +138,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-
-          <div className="w-full bg-blue-50 h-16"></div>
-          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 sm:flex sm:flex-col sm:items-center">
+          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 flex flex-col items-center bg-white">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
@@ -159,11 +156,11 @@ const Home = () => {
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
-              className="w-full sm:hidden lg:block"
+              className="w-full hidden lg:block"
             />
           </div>
+          <div></div>
         </div>
-        <div className="w-full bg-blue-50 h-40"></div>
       </div>
     </Layout>
   );

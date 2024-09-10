@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className=" bg-black p-4 text-center text-white">
       {/* Add mt-auto */}
-      <div className="flex justify-between lg:mx[200px] sm:mx-[50px]">
+      <div className="flex justify-between lg:mx[200px] mx-[50px]">
         <div className="flex gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ const Footer = () => {
       </div>
       <div className="flex items-center justify-center my-[100px]">
         {/* Logo */}
-        <img src="public\images\logo_wolf.webp" alt="Logo" className="w-24 mr-2"/>
+        <img src="/images/logo_wolf.webp" alt="Logo" className="w-24 mr-2"/>
 
         {/* Brand Text */}
         <span

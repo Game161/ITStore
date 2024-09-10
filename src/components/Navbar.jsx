@@ -1,63 +1,89 @@
-import React from "react";
 import logo from "../assets/react.svg";
 import { NavLink } from "react-router-dom";
-
+import React, { useState, useRef } from 'react';
 const Navbar = () => {
+    const [iconName, setIconName] = useState('menu');
+    const iconRef = useRef();
+    const navlinksRef = useRef();
+
+    const onToggleMenu = () => {
+      const newName = iconName === 'menu' ? 'close' : 'menu';
+      setIconName(newName);
+      iconRef.current.name = newName;
+  
+      // Toggle the class for the navlinks
+      if (navlinksRef.current) {
+        navlinksRef.current.classList.toggle('top-[9%]');
+        navlinksRef.current.classList.toggle('-top-full');
+      }
+  
+    };
+
   return (
-    <nav className="bg-black p-4 flex justify-between items-center xl:px-20 sm:px-10">
-      <div className="xl:flex items-center xl:gap-24 gap-0">
+    <nav className="bg-black p-4 flex justify-between items-center xl:px-20 px-10">
+      <div className="xl:flex items-center lg:gap-24 gap-0">
         <div className="flex items-center justify-center text-white">
-        <button className="mr-2 xl:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-        </button>
+        <button className="flex justify-center items-center mr-2 lg:hidden text-white text-3xl">
+      <ion-icon
+        ref={iconRef}
+        name={iconName}
+        className="cursor-pointer"
+        onClick={onToggleMenu}
+      ></ion-icon>
+    </button>
           {/* Logo */}
-          <img src="public\images\logo_wolf.webp" alt="Logo" className="w-12 mr-2" />
+          <img
+            src="/images/logo_wolf.webp"
+            alt="Logo"
+            className="w-12 mr-2"
+          />
 
           {/* Brand Text */}
-          <span className="flex text-white font-semibold
-          logo text-[40px] gap-2">PPGP <span className="text-blue-600">IT</span></span>
+          <span
+            className="flex text-white font-semibold
+          logo text-[40px] gap-2"
+          >
+            PPGP <span className="text-blue-600">IT</span>
+          </span>
+          <div className="absolute bg-white min-h-[25vh] left-0 -top-full w-full flex items-center z-[999] lg:static lg:bg-black lg:min-h-[92px] transition-all duration-300" ref={navlinksRef}>
+            <ul className="flex flex-col lg:flex-row lg:ml-8 lg:gap-16 xl:gap-24 text-2xl w-full justify-center items-center gap-4">
+              <li className="">
+                <NavLink
+                  to="/"
+                  className="lg:text-white text-black hover:text-green-400 lg:block"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="">
+                <NavLink
+                  to="/product"
+                  className="lg:text-white text-black hover:text-green-400 flex justify-center items-center gap-2">
+                  Product
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+                </NavLink>
+              </li>
+              <li className="">
+                <NavLink
+                  to="/contact"
+                  className="lg:text-white text-black hover:text-green-400 lg:block"
+                >
+                  Contact
+                </NavLink>
+              </li>
+              <li className="">
+                <NavLink
+                  to="/about"
+                  className="lg:text-white text-black hover:text-green-400 lg:block"
+                >
+                  About
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul className="flex gap-24 text-2xl">
-          <li>
-            <NavLink to="/" className="text-white hover:text-green-400 sm:hidden xl:block">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/product" className="text-white hover:text-green-400 sm:hidden xl:block">
-              Product
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" className="text-white hover:text-green-400 sm:hidden xl:block">
-              Contact
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" className="text-white hover:text-green-400 sm:hidden xl:block">
-              About
-            </NavLink>
-          </li>
-        </ul>
       </div>
       <div className="flex text-white gap-10">
-        <NavLink>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-search"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.3-4.3" />
-          </svg>
-        </NavLink>
         <NavLink>
           <svg
             xmlns="http://www.w3.org/2000/svg"
