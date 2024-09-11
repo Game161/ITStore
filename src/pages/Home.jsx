@@ -19,18 +19,18 @@ const Home = () => {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 640 },
+      breakpoint: { max: 1024, min: 464 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 640, min: 0 },
+      breakpoint: { max: 464, min: 0 },
       items: 1,
     },
   };
   const productList = [
     {
       image: "20200824120814.jpg",
-      name: "kareenotebook",
+      name: "Keyboard",
     },
     {
       image: "Notebook.webp",
@@ -67,7 +67,7 @@ const Home = () => {
 
       {/* product */}
       <div className="gap-10">
-        <div className="flex flex-col gap-28 bg-white px-[200px]">
+        <div className="flex flex-col gap-28 bg-white lg:px-[200px] px-0">
           <h1 className="uppercase text-5xl font-bold mt-10 flex justify-center">
             our products
           </h1>

@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
         <div className="flex text-white gap-3">
           <a href="">
-              <img src="public\images\twitter.png" className="bg-white w-6" alt="" />
+              <img src="/images/twitter.png" className="w-6" alt="" />
           </a>
           <a href="">
             <svg
@@ -78,17 +78,17 @@ const Footer = () => {
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
           </a>
-          <a href=""><img src="public\images\discord.png" className="bg-white w-6" alt="" /></a>
+          <a href=""><img src="/images/discord.png" className="w-6" alt="" /></a>
         </div>
       </div>
       <div className="flex mt-2 text-white">
-        <hr className="w-[2.5%] border-red-600" />
-        <hr className="w-[95%]" />
-        <hr className="w-[2.5%] border-red-600" />
+        <hr className="w-[2.5%] border-[#FF0000] border-[1.5px]" />
+        <hr className="w-[95%] border-[1.5px] border-[#FFFFFF]" />
+        <hr className="w-[2.5%] border-[#FF0000] border-[1.5px]" />
       </div>
       <div className="flex items-center justify-center my-[100px]">
         {/* Logo */}
-        <img src="/images/logo_wolf.webp" alt="Logo" className="w-24 mr-2"/>
+        <img src="/images/logo.png" alt="Logo" className="w-24 mr-2"/>
 
         {/* Brand Text */}
         <span

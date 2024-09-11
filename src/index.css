@@ -60,5 +60,21 @@ body{
     width: 100%;
   }
 }
+a{
+  position: relative;
+}
+a::before{
+  content:'';
+  position:absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: white;
+  transition: all .5s;
+}
+a:hover::before{
+  width: 100%;
+}
 
 

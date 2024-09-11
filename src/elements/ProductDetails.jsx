@@ -1,19 +1,89 @@
-import React from 'react'
-
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 const ProductDetailBox = (props) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const onIncre = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const onDecre = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  const success = () => {
+    Swal.fire({
+      title: "สั่งซื้อสำเร็จ",
+      icon: "success",
+    });
+  };
   return (
     <div className="w-[1469px] h-[537px] rounded-lg bg-white border-[1px] border-black flex justify-between">
       <img src={props.image} alt="" />
       <div className="flex flex-col w-[630px] my-10 gap-2">
         <h1 className="text-[64px] font-semibold">{props.type}</h1>
-        <h3 className="text-red-500 text-2xl font-semibold">รายละเอียด</h3>
+        <h3 className="text-[#FF0000] text-2xl font-semibold">รายละเอียด</h3>
         <h2 className="text-[32px] font-semibold">{props.productname}</h2>
-        <h2 className='text-[36px] font-medium'>ราคา {props.price} </h2>
-        <h3 className='text-2xl'>จำนวน</h3>
-        <button className='w-[245px] border-[1px] border-red-500 h-[41px] text-2xl font-semibold text-red-500 py-2'>สั่งซื้อทันที</button>
+        <h2 className="text-[36px] font-medium">ราคา {props.price} </h2>
+        <div className="inline-flex items-center">
+          <h3 className="text-2xl mr-2">จำนวน</h3>
+          <button
+            className="w-[43px] h-[38px] bg-[#EAEAEA] flex items-center justify-center border-l rounded-l-lg"
+            onClick={onIncre}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-plus"
+            >
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
+            </svg>
+          </button>
+          <input
+            type="text"
+            className="w-[70px] h-[38px] text-center"
+            value={quantity}
+            readOnly
+          />
+          <button
+            className="w-[43px] h-[38px] bg-[#EAEAEA] flex items-center justify-center border-l rounded-r-lg"
+            onClick={onDecre}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="38"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-minus"
+            >
+              <path d="M5 12h14" />
+            </svg>
+          </button>
+        </div>
+        <button
+          className="w-[245px] border-[1px] border-[#FF0000] h-[41px] text-2xl font-semibold text-[#FF0404] py-2"
+          onClick={success}
+        >
+          สั่งซื้อทันที
+        </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductDetailBox
+export default ProductDetailBox;
