@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
-import Card from "../elements/card";
-import React, { useState, useRef } from "react";
+import Card from "../elements/Card";
+import React, { useState} from "react";
 
 const Products = () => {
   const [isProductOpen, setProductOpen] = useState(false);
