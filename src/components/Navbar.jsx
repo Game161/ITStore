@@ -13,7 +13,7 @@ const Navbar = () => {
 
     // Toggle the class for the navlinks
     if (navlinksRef.current) {
-      navlinksRef.current.classList.toggle("top-[9%]");
+      navlinksRef.current.classList.toggle("top-[8%]");
       navlinksRef.current.classList.toggle("-top-full");
     }
   };
@@ -53,17 +53,19 @@ const Navbar = () => {
               <li className="">
                 <NavLink
                   to="/"
-                  className="lg:text-white text-black hover:text-blue-600 lg:block transition-all duration-500"
+                  className="lg:text-white text-black hover:text-blue-600 lg:block transition-all duration-500 "
                 >
                   Home
+                  <hr className="lg:hidden"/>
                 </NavLink>
               </li>
               <li className="">
                 <NavLink
                   to="/product"
-                  className="lg:text-white text-black hover:text-blue-600 flex justify-center items-center gap-2"
+                  className="lg:text-white text-black hover:text-blue-600 lg:block transition-all duration-500 "
                 >
                   Product
+                  <hr className="lg:hidden"/>
                 </NavLink>
               </li>
               <li className="">
@@ -72,6 +74,7 @@ const Navbar = () => {
                   className="lg:text-white text-black hover:text-blue-600 lg:block"
                 >
                   Contact
+                  <hr className="lg:hidden"/>
                 </NavLink>
               </li>
               <li className="">
@@ -80,6 +83,7 @@ const Navbar = () => {
                   className="lg:text-white text-black hover:text-blue-600 lg:block"
                 >
                   About
+                  <hr className="lg:hidden"/>
                 </NavLink>
               </li>
             </ul>
