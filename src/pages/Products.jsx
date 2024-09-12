@@ -231,8 +231,8 @@ const Products = () => {
           {isColorOpen && (
             <div>
               <div className="flex gap-2">
-                <div className="rounded-full bg-black border-[1px] border-[#878787] w-[20px] h-[20px]"></div>
-                <div className="rounded-full bg-white border-[1px] border-[#878787] w-[20px] h-[20px]"></div>
+                <div className="rounded-full bg-black border-[1px] border-[#878787] w-[20px] h-[20px] cursor-pointer"></div>
+                <div className="rounded-full bg-white border-[1px] border-[#878787] w-[20px] h-[20px] cursor-pointer"></div>
               </div>
             </div>
           )}
