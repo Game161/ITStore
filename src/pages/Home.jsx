@@ -85,7 +85,7 @@ const Home = () => {
         <div className="flex flex-col mx-auto gap-24">
           <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
-              src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
+              src="/images/homemouse.webp"
               alt=""
               className="w-full"
             />
@@ -101,7 +101,7 @@ const Home = () => {
           </div>
           <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
-              src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
+              src="/images/homekeyboard.webp"
               alt=""
               className="w-full lg:hidden"
             />
@@ -111,11 +111,11 @@ const Home = () => {
               <p className="text-sm font-semibold mt-8 mb-8">
                 ตั้งค่าคีย์บอร์ดของคุณด้วย G Keys ที่พร้อมใช้งานมาโคร
                 ปรับการเชื่อมโยงแต่ละปุ่มแยกต่างหาก กำหนดค่า การผูกปุ่มหลายปุ่ม
-                หรือสร้างมาโครแบบซับซ้อนได้ โปรแกรม LIGHTSYNC  
+                หรือสร้างมาโครแบบซับซ้อนได้ โปรแกรมLIGHTSYNC  
               </p>
             </div>
             <img
-              src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
+              src="/images/homeheadphone.webp"
               alt=""
               className="w-full hidden lg:block"
             />
@@ -139,7 +139,7 @@ const Home = () => {
           </div>
           <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
-              src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
+              src="/images/homewebcam.webp"
               alt=""
               className="w-full lg:hidden"
             />
