@@ -29,19 +29,19 @@ const Home = () => {
   };
   const productList = [
     {
-      image: "20200824120814.jpg",
+      image: "product1.png",
       name: "Keyboard",
     },
     {
-      image: "Notebook.webp",
-      name: "sdfsdfsdf",
+      image: "product7.png",
+      name: "Headphone",
     },
     {
-      image: "Notebook.webp",
-      name: "sdfsdfsdfsdfsdf",
+      image: "product8.png",
+      name: "Mouse",
     },
     {
-      image: "Notebook.webp",
+      image: "product9.png",
       name: "sdfsdfsdfsdfsdf",
     },
     {
@@ -84,23 +84,23 @@ const Home = () => {
         {/* rec section */}
 
         <div className="flex flex-col mx-auto gap-24">
-          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 flex flex-col items-center bg-white">
+          <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
-              className="w-full "
+              className="w-full"
             />
             <div className="flex flex-col justify-center gap-2 w-80">
               <h1 className="text-4xl font-bold">Mouse</h1>
               <div className="rhombus step3"></div>
-              <p className="text-sm font-semibold mt-8">
+              <p className="text-sm font-semibold mt-8 mb-8">
                 กำหนดค่าเมาส์ของคุณ รวมถึงออปติคอลเซ็นเซอร์ การตั้งค่า DPI
                 การเลื่อนและการเร่งความเร็ว การตั้งโปรแกรมปุ่ม
                 และหน่วยความจำออนบอร์ด ตั้งโปรแกรม LIGHTSYNC
               </p>
             </div>
           </div>
-          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 flex flex-col items-center bg-white">
+          <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
@@ -109,7 +109,7 @@ const Home = () => {
             <div className="flex flex-col justify-center gap-2 w-80">
               <h1 className="text-4xl font-bold">Keyboard</h1>
               <div className="rhombus step3"></div>
-              <p className="text-sm font-semibold mt-8">
+              <p className="text-sm font-semibold mt-8 mb-8">
                 ตั้งค่าคีย์บอร์ดของคุณด้วย G Keys ที่พร้อมใช้งานมาโคร
                 ปรับการเชื่อมโยงแต่ละปุ่มแยกต่างหาก กำหนดค่า การผูกปุ่มหลายปุ่ม
                 หรือสร้างมาโครแบบซับซ้อนได้ โปรแกรม LIGHTSYNC  
@@ -122,23 +122,23 @@ const Home = () => {
             />
           </div>
 
-          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 flex flex-col items-center bg-white">
+          <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
-              className="w-full"
+              className="w-full" 
             />
             <div className="flex flex-col justify-center gap-2 w-80">
               <h1 className="text-4xl font-bold">Headphones and Speakers</h1>
               <div className="rhombus step3"></div>
-              <p className="text-sm font-semibold mt-8">
+              <p className="text-sm font-semibold mt-8 mb-8">
                 ตั้งค่าEQแบบกำหนดเองและค่ากำหนดระบบเซอร์ราวด์ของแต่ละโปรไฟล์เกมแยกกันได้
                 กำหนด G Keys ที่ติดตั้งบนชุดหูฟังเพื่อการเล่นที่เร็วกว่า
                 และแม่นยำกว่า โปรแกรมอุปกรณ์เสียง LIGHTSYNC
               </p>
             </div>
           </div>
-          <div className="lg:grid lg:grid-cols-2 px-28 gap-24 flex flex-col items-center bg-white">
+          <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
               src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
               alt=""
@@ -147,7 +147,7 @@ const Home = () => {
             <div className="flex flex-col justify-center gap-2 w-80">
               <h1 className="text-4xl font-bold">Webcam</h1>
               <div className="rhombus step3"></div>
-              <p className="text-sm font-semibold mt-8">
+              <p className="text-sm font-semibold mt-8 mb-8">
                 สร้างโปรไฟล์กล้องและวิดีโอ
                 การตั้งค่าได้รับการจัดเก็บและนำไปใช้ตั้งแต่เริ่มต้น
                 สลับโปรไฟล์ขณะใช้งานได้

@@ -119,7 +119,7 @@ const Products = () => {
             </button>
           </div>
           {isProductOpen && (
-            <div>
+            <div className="">
               <div className="flex gap-2">
                 <input type="checkbox" className="" />
                 <h4 className="text-[16px] font-medium">Keyboards</h4>
