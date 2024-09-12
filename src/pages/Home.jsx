@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import ProductTypeCard from "../elements/ProductTypeCard";
-import Slideshow from "../elements/slideshow";
+import Slideshow from "../elements/Slideshow";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const Home = () => {
