@@ -1,11 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Slideshow from "../elements/slideshow";
 
 const Contact = () => {
   return (
     <Layout>
-      <Slideshow />
       <h1 className="font-bold lg:text-[64px] text-black mt-5 mx-10 md:text-[40px]">Contact</h1>
       <hr />
       <div className="mx-10">

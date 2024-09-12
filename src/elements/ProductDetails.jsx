@@ -20,13 +20,13 @@ const ProductDetailBox = (props) => {
     });
   };
   return (
-    <div className="w-[1469px] h-[537px] rounded-lg bg-white border-[1px] border-black flex justify-between">
-      <img src={props.image} alt="" />
-      <div className="flex flex-col w-[630px] my-10 gap-2">
+    <div className="w-[100%] h-[100%] rounded-lg bg-white border-[1px] border-black flex justify-between px-10 my-10 gap-5 flex-col lg:flex-row">
+      <img src={`/images/${props.image}`} alt="" className="min-w-[20%]"/>
+      <div className="flex flex-col w-[630px] my-10 gap-2 justify-center">
         <h1 className="text-[64px] font-semibold">{props.type}</h1>
         <h3 className="text-[#FF0000] text-2xl font-semibold">รายละเอียด</h3>
-        <h2 className="text-[32px] font-semibold">{props.productname}</h2>
-        <h2 className="text-[36px] font-medium">ราคา {props.price} </h2>
+        <h2 className="text-[32px] font-semibold">{props.details}</h2>
+        <h2 className="text-[36px] font-medium">ราคา {props.price} ฿</h2>
         <div className="inline-flex items-center">
           <h3 className="text-2xl mr-2">จำนวน</h3>
           <button
@@ -51,7 +51,7 @@ const ProductDetailBox = (props) => {
           </button>
           <input
             type="text"
-            className="w-[70px] h-[38px] text-center"
+            className="w-[70px] h-[38px] text-center bg-[#FAFAFA]"
             value={quantity}
             readOnly
           />

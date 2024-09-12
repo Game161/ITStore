@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const Card = (props) => (
-  <div className="flex flex-col w-[350px] justify-center items-center shadow-lg rounded-lg p-4 bg-white gap-[66px]">
+  <div className="flex flex-col w-[350px] justify-center items-center shadow-lg rounded-lg p-4 bg-white gap-[66px] my-5">
     <img
       src={`/images/${props.image}`}
       alt={props.name}

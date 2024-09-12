@@ -19,7 +19,6 @@ const App = () => {
           <Route path='/product' element={<Products/>}></Route>
           <Route path='*' element={<NotFound/>}></Route>
 
-
         </Routes>
       </Router>
     </>
