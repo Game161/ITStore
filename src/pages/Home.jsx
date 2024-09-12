@@ -115,7 +115,7 @@ const Home = () => {
               </p>
             </div>
             <img
-              src="/images/homeheadphone.webp"
+              src="/images/homekeyboard.webp"
               alt=""
               className="w-full hidden lg:block"
             />
@@ -123,7 +123,7 @@ const Home = () => {
 
           <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
-              src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
+              src="/images/homeheadphone.webp"
               alt=""
               className="w-full" 
             />
@@ -153,7 +153,7 @@ const Home = () => {
               </p>
             </div>
             <img
-              src="https://www.woodlandtrust.org.uk/media/50820/house-mouse-wtml-1062551-amy-lewis.jpg"
+              src="/images/homewebcam.webp"
               alt=""
               className="w-full hidden lg:block"
             />
