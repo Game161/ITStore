@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import Card from "../elements/card";
 import ProductTypeCard from "../elements/ProductTypeCard";
 import Slideshow from "../elements/slideshow";
 import Carousel from "react-multi-carousel";
