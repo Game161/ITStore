@@ -76,7 +76,7 @@ const ProductDetails = () => {
 
   return (
     <Layout>
-      <div className="mx-[200px] mt-10">
+      <div className="mx-[200px] mt-10" data-aos="fade-up" data-aos-duration="1500">
         <h1 className="text-4xl font-medium">
           รายละเอียดสินค้า
         </h1>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NotFound = () => {
   return (
     <Layout>
-      <div className="h-screen w-full flex justify-center items-center flex-col gap-5">
+      <div className="h-screen w-full flex justify-center items-center flex-col gap-5" data-aos="fade-up" data-aos-duration="1500">
         <h1 className="font-bold text-4xl text-black">
           Sorry, Not Found :(
         </h1>
