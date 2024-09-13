@@ -4,6 +4,7 @@ import Slideshow from "../elements/Slideshow";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const Home = () => {
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -41,23 +42,11 @@ const Home = () => {
     },
     {
       image: "product9.png",
-      name: "sdfsdfsdfsdfsdf",
+      name: "Headset",
     },
     {
       image: "Notebook.webp",
-      name: "sdfsfd",
-    },
-    {
-      image: "Notebook.webp",
-      name: "sdfsdfsdf",
-    },
-    {
-      image: "Notebook.webp",
-      name: "sdfsdfsdfsdf",
-    },
-    {
-      image: "Notebook.webp",
-      name: "sdfsdfsdfsdfds",
+      name: "Notebook",
     },
   ];
   return (
@@ -83,7 +72,7 @@ const Home = () => {
         {/* rec section */}
 
         <div className="flex flex-col mx-auto gap-24">
-          <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
+          <div data-aos="fade-right" data-aos-duration="1500" className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
               src="/images/homemouse.webp"
               alt=""
@@ -99,7 +88,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
+          <div data-aos="fade-left" data-aos-duration="1500" className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
               src="/images/homekeyboard.webp"
               alt=""
@@ -121,7 +110,7 @@ const Home = () => {
             />
           </div>
 
-          <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
+          <div data-aos="fade-right" data-aos-duration="1500" className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
               src="/images/homeheadphone.webp"
               alt=""
@@ -137,7 +126,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
+          <div data-aos="fade-left" data-aos-duration="1500" className="lg:grid lg:grid-cols-2 gap-24 flex flex-col items-center bg-white lg:px-28">
             <img
               src="/images/homewebcam.webp"
               alt=""

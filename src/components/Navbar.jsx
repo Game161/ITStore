@@ -110,7 +110,7 @@ const Navbar = () => {
         </button>
 
 
-        {isOpen && (
+          {isOpen && (
           <div className="fixed top-20 right-[9%] bg-white flex justify-center items-center w-[375px] h-[470px] z-[999] rounded-[40px]">
             <div className="bg-white text-black py-[50px] gap-[25px] flex flex-col">
               <div className="flex flex-col justify-center items-center gap-[10px]">

@@ -1,4 +1,3 @@
-import React from 'react'
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
@@ -6,7 +5,14 @@ import Contact from './pages/Contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NotFound from './pages/NotFound';
 import ProductDetails from './pages/ProductDetails';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
 const App = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <Router>

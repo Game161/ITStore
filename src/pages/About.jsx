@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const About = () => {
   return (
     <Layout>
-      <div className="w-full h-screen flex items-center justify-between gap-0 flex-col lg:flex-row my-5 lg:mx-0 mx-5">
+      <div className="w-full h-screen flex items-center justify-between gap-0 flex-col lg:flex-row my-5 lg:mx-0 mx-5" data-aos="fade-up" data-aos-duration="1500">
         <div className="lg:ml-[150px] lg:w-[564px] m-0 p-0 w-full">
         <h1 className="font-semibold text-[40px]">เกี่ยวกับเรา</h1>
         <h1 className="text-[80px] font-bold">About us</h1>

@@ -1,10 +1,15 @@
 import React from "react";
 import Layout from "../components/Layout";
-
+import { Link } from "react-router-dom";
 const NotFound = () => {
   return (
     <Layout>
-      <h1 className="font-bold text-4xl text-blue-950">Sorry, Not Found :(</h1>
+      <div className="h-screen w-full flex justify-center items-center flex-col gap-5">
+        <h1 className="font-bold text-4xl text-black">
+          Sorry, Not Found :(
+        </h1>
+        <Link to="/" className="text-3xl text-white p-5 bg-black rounded-lg">Back to Home</Link>
+      </div>
     </Layout>
   );
 };

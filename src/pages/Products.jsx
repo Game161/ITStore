@@ -79,7 +79,7 @@ const Products = () => {
         Products
       </div>
       <div className="flex 2xl:mx-[100px] lg:gap-3 mt-3 mx-[50px] gap-6">
-        <div className="lg:w-[20%] bg-white px-2 py-4 flex flex-col gap-2 w-[40%]">
+        <div className="lg:w-[20%] bg-white px-2 py-4 flex flex-col gap-2 w-[40%] rounded-lg" data-aos="fade-up" data-aos-duration="1500">
           <div className="flex justify-between items-center">
             <h2 className="text-[22px] font-semibold">Products</h2>
             <button onClick={() => toggleSection("product")}>
@@ -289,7 +289,7 @@ const Products = () => {
           )}
         </div>
 
-        <div className="grid xl:grid-cols-3 lg:w-[80%] grid-cols-1 lg:grid-cols-2 w-[50%]">
+        <div className="grid xl:grid-cols-3 lg:w-[80%] grid-cols-1 lg:grid-cols-2 w-[50%]" data-aos="fade-up" data-aos-duration="1500">
           {productList.map((d) => (
             <Card key={d.name} {...d} />
           ))}

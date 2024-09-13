@@ -24,7 +24,7 @@ const Footer = () => {
           <p>2025 PPGP IT | All rights reserved.</p>
         </div>
         <div className="flex text-white gap-3">
-          <a href="">
+          <a href="x.com">
               <img src="/images/twitter.png" className="w-6" alt="" />
           </a>
           <a href="">
